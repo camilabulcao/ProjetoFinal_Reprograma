@@ -1,0 +1,26 @@
+{
+  "name": "projetofinal_reprograma",
+  "version": "1.0.0",
+  "description": "API InfoMEI",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camilabulcao/ProjetoFinal_Reprograma.git"
+  },
+  "author": "Camilaa Bulcão",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camilabulcao/ProjetoFinal_Reprograma/issues"
+  },
+  "homepage": "https://github.com/camilabulcao/ProjetoFinal_Reprograma#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.2",
+    "nodemon": "^2.0.6"
+  }
+}
