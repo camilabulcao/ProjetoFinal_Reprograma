@@ -1,8 +1,8 @@
 const mongoose = require ("mongoose")
-const Schema = mongoose.Schema
+const Schema = mongoose.Schema;
 
-const infoMEISchema = new Schema ({
-    id: {
+const usuarioSchema =  new Schema ({
+    _id: {
         type: mongoose.Schema.Types.ObjectId, //tipo de dado dentro do mongoose que é id
         auto: true, 
         required: true
@@ -24,3 +24,7 @@ const infoMEISchema = new Schema ({
         required: true
     }
 })
+
+const usuarioCollections = mongoose.model(('usuario'), usuarioSchema)
+
+module.exports = usuarioCollections
