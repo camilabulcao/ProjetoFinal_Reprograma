@@ -1,3 +1,4 @@
+const { response } = require("express")
 const express = require("express")
 const usuarioCollections = require("../models/usuarioSchema")
 
@@ -30,7 +31,79 @@ const addUsuario = (request, response) => {
         }
     })
 }
+
+const getUsuarioId = (request, response) =>{
+    const idParams = request.params.id
+    usuarioCollections.findById(idParams, (error,usuarioId) =>{
+        if (error) {
+            return response.status(500).send(error)
+        } else{
+            if(usuarioId){
+                return response.status(200).send(usuarioId)
+            } else {
+                return response.status(404).send("Usuario não encontrado")
+            }
+        }
+    })
+
+}
+
+const updateUsuario = (request, response) =>{
+    const idParams = request.params.id
+    const usuarioBody = request.body
+    const atualizarUsuario = {new: true}
+
+    usuarioCollections.findByIdAndUpdate(idParams, usuarioBody, atualizarUsuario, (error,usuario) =>{
+        if(error){
+            return response.status(500).send(error)
+        }else {
+            return response.status(200).send({
+                messagem: 'Usuario atualizado com sucesso', 
+                usuario
+            })
+        }
+    })
+
+}
+
+const updateTelefone = (request, response) => {
+    const idParams = request.params.id
+    const telefoneBody = request.body
+    const atualizar = {new: true} 
+
+    usuarioCollections.findByIdAndUpdate(idParams, telefoneBody, atualizar, (error, usuario)=>{
+        if(error){
+            return response.status(500).send(error)
+         }else if(usuario){
+            return response.status(200).send({
+                message: "O telefone foi atualizado com sucesso",usuario
+         })
+
+         }else {
+            return response.status(404).send(" Ops! Telefone não encontrado")
+        }
+    })
+}
+
+const deleteUsuario = (request, response) =>{
+    const idParams = request.params.id
+    usuarioCollections.findByIdAndDelete(idParams, (error, usuarioId) =>{
+        if(error){
+            return response.status(500).send(error)
+        } else if(usuarioId) { 
+            return response.status(200).send({message: "Deletado com Sucesso"})
+
+        }else {
+            return response.status(404).send("Usuario não encontrado")
+        }
+
+    })
+}
 module.exports = {
     getAll , 
-    addUsuario
+    addUsuario, 
+    getUsuarioId, 
+    updateUsuario, 
+    updateTelefone, 
+    deleteUsuario
 }
