@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const DB_URL = "mongodb://localhost:27017/Reprograma"  //criando a url da conexão com o mongo
+const DB_URL = "mongodb://localhost:27017/projetofinal"  //criando a url da conexão com o mongo
 
 const connect = () =>{
     mongoose.connect(DB_URL, {useNewUrlParser: true, 
@@ -13,4 +13,3 @@ const connect = () =>{
 
 module.exports = { connect }
 
-//O arquivo repository cria conexão com o banco de dados (MongoDB)

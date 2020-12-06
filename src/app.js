@@ -14,6 +14,6 @@ app.use(express.json())
 
 
 app.use("/", index) // rotas raízes
-//app.use("/usuario", usuario) 
+app.use("/usuario", usuario) 
 
 module.exports = app

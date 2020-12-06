@@ -1,4 +1,3 @@
-const { response } = require("express")
 const express = require("express")
 const usuarioCollections = require("../models/usuarioSchema")
 
@@ -20,7 +19,7 @@ const addUsuario = (request, response) => {
     const usuarioBody = request.body //pegando o body que o usuario digitou
     const usuario = new usuarioCollections(usuarioBody) //criando um novo dado para o body
 
-    usuario.save((error) => {
+    usuario.save((error, usuario) => {
         if (error) {
             return response.status(400).send(error)
         } else {
