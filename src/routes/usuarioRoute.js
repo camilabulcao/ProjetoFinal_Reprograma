@@ -10,6 +10,7 @@ router.get("/id/:id", controller.getUsuarioId)
 router.put("/atualizar/:id", controller.updateUsuario)
 router.patch("/telefone/:id", controller.updateTelefone)
 router.delete("/id/:id", controller.deleteUsuario)
+//router.post("/autenticacao", controller.autenticacao)
 
 
 module.exports = router

@@ -19,14 +19,13 @@ const usuarioSchema =  new Schema ({
     telefone:{
         type: String,
         required:true, 
-        unique: true, 
-        lowercase: true //para forçar tudo ser minusculo
+        unique: true
     }, 
     senha:{
         type: String, 
         required: true, 
-        select: false //para não vim a informação da senha quando buscarmos na base de dados
-
+        select: false, //para não vim a informação da senha quando buscarmos na base de dados
+        lowercase: true //para forçar tudo ser minusculo
     }, 
     createdAt:{
         type: Date,

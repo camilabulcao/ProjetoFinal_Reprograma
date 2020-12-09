@@ -1,6 +1,7 @@
 const { response } = require("express")
 const express = require("express")
 const usuarioCollections = require("../models/usuarioSchema")
+const bcrypt = require("bcryptjs")
 
 const getAll = (request, response)=>{
     console.log(request.url)
@@ -19,17 +20,26 @@ const getAll = (request, response)=>{
 const addUsuario = (request, response) => {
     const usuarioBody = request.body //pegando o body que o usuario digitou
     const usuario = new usuarioCollections(usuarioBody) //criando um novo dado para o body
+    //const emailParams = email.body
+
+    usuarioCollections.findOne({email: usuario.email}, (error, usuarioEncontrado) =>{
+        if (error) { 
+            return response.status(500).send(error) 
+        } else if (usuarioEncontrado) {
+            return response.status(200).send({error: "Email já cadastrado."}) 
+        }
+    })
 
     usuario.save((error, usuario) => {
         if (error) {
-            return response.status(400).send(error)
+                return response.status(400).send(error)
         } else {
             return response.status(200).send({
-                mensagem: "POST com sucesso",
-                usuario
-            })
-        }
-    })
+                    mensagem: "POST com sucesso",
+                    usuario
+                })
+            }
+        })
 }
 
 const getUsuarioId = (request, response) =>{
@@ -81,7 +91,7 @@ const updateTelefone = (request, response) => {
          })
 
          }else {
-            return response.status(404).send(" Ops! Telefone não encontrado")
+            return response.status(404).send(" Ops! Usuário não encontrado")
         }
     })
 }
@@ -100,11 +110,29 @@ const deleteUsuario = (request, response) =>{
 
     })
 }
+
+ /*async function autenticacao (request, response) {
+     const {email, senha} = request.body
+     
+     const usuario = await (await usuarioCollections.findOne({email})).select('+senha');
+
+     if(!usuario){
+         return response.status(400).send({error: 'Usuário não encontrado'})
+     }
+     if(!await bcrypt.compare(senha, usuario.senha)){
+         return response.status(400).send({error: 'Senha inválida'})
+
+     }
+     response.send({usuario})
+
+ }*/
+
 module.exports = {
     getAll , 
     addUsuario, 
     getUsuarioId, 
     updateUsuario, 
     updateTelefone, 
-    deleteUsuario
+    deleteUsuario, 
+   // autenticacao
 }
