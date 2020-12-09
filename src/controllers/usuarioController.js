@@ -66,6 +66,7 @@ const updateUsuario = (request, response) =>{
 
 }
 
+
 const updateTelefone = (request, response) => {
     const idParams = request.params.id
     const telefoneBody = request.body

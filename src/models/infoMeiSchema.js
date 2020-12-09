@@ -2,7 +2,7 @@ const mongoose = require ("mongoose")
 const Schema = mongoose.Schema;
 
 const infoMeiSchema = new Schema ({
-    usuarioId: {
+   modificacao_usuarioId: {
         type: Schema.Types.ObjectId, 
         ref: 'usuario',
         required: true
