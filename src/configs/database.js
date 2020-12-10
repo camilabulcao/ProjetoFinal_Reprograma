@@ -1,9 +1,10 @@
 const mongoose = require("mongoose")
-const DB_URI = "mongodb://localhost:27017/projetofinal"  //criando a url da conexão com o mongo
+ //criando a url da conexão com o mongo
 const dotenv = require('dotenv') // inserir recente
 
 dotenv.config()
 
+const DB_URI = process.env.DB_URI
 
 const connect = () =>{
     mongoose.connect(DB_URI, {useNewUrlParser: true, 
