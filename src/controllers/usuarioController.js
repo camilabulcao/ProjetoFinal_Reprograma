@@ -111,22 +111,6 @@ const deleteUsuario = (request, response) =>{
     })
 }
 
- /*async function autenticacao (request, response) {
-     const {email, senha} = request.body
-     
-     const usuario = await (await usuarioCollections.findOne({email})).select('+senha');
-
-     if(!usuario){
-         return response.status(400).send({error: 'Usuário não encontrado'})
-     }
-     if(!await bcrypt.compare(senha, usuario.senha)){
-         return response.status(400).send({error: 'Senha inválida'})
-
-     }
-     response.send({usuario})
-
- }*/
-
 module.exports = {
     getAll , 
     addUsuario, 
@@ -134,5 +118,5 @@ module.exports = {
     updateUsuario, 
     updateTelefone, 
     deleteUsuario, 
-   // autenticacao
+
 }
