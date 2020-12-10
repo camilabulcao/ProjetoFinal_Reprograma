@@ -59,7 +59,7 @@ const deleteInfoMei = (request, response) => {
             return response.status(500).send(error)
         } else {
             if (infoMeiID) {
-                return response.status(200).send(infoMeiID)
+                return response.status(200).send("Informação sobre o MEI deletada com sucesso")
             } else {
                 return response.status(404).send("Informação sobre o MEI não encontrada")
             }
