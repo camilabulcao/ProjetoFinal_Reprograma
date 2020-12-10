@@ -3,7 +3,7 @@ const router = express.Router()
 
 router.get("/", function(request, response){
     response.status(200).send({
-        titulo: "InfoMEI - Informações sobre abertura de empresa na categoria MEI",
+        titulo: "Seja bem-vinda (o) a API - InfoMEI!",
         version: "1.0.0"
     })
 })
