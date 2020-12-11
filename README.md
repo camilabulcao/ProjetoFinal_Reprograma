@@ -12,7 +12,7 @@
  A API (InfoMei) por objetivo direcionar os futuros e/ou atuais microempreendedores individuais (MEIs) através de um ambiente confiável sobre os assuntos relacionados a essa categoria empresarial para que não tenham custos desnecessários e que transmitam os seus dados com segurança por meio do site oficial (através do links trazidos na API). 
  
  ---
-## Tecnologias 
+## Tecnologias / Ferramentas
  <img src="https://img.shields.io/badge/-github-blue">
 &nbsp;
 <img src="https://img.shields.io/badge/-node.js-brightgreen">
