@@ -85,7 +85,7 @@ O processo de transição de carreira traz diversos obstáculos ao longo do cami
 
 Agradeço imensamente a Ceci, Jô, Ju, e todas as professoras e monitoras que nos acompanharam durante esses meses, cada uma de vocês tevem um papel fundamental.  
 
-Agradeço as mulheres maravilhosas da turma on6-xp, as quais o bootcamp me apresentou mesmo a distância, e pela rede de apoio linda que formamos durante esse jornada e que vamos levar para vida. Por cada aprendizado compartilhado, por cada dúvida esclarecida, por cada dica e ensinamento para vida pessoal e/ou profissional, aqui vai o meu sincero Muito Obrigada! ❤️
+Agradeço as mulheres maravilhosas da turma on6-xp, as quais o bootcamp me apresentou mesmo a distância, e pela rede de apoio linda que formamos durante essa jornada e que vamos levar para vida. Por cada aprendizado compartilhado, por cada dúvida esclarecida, por cada dica e ensinamento para vida pessoal e/ou profissional, aqui vai o meu sincero Muito Obrigada! ❤️
 
 Agradeço a Deus por concluir mais essa etapa na minha vida e por toda sustentação que ele me deu. Agradeço a minha família por todo apoio e incentivo e em especial a minha amiga Mayara por toda paciência e esclarecimentos das dúvidas.
 
