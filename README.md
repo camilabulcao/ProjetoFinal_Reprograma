@@ -9,7 +9,7 @@
 
  ## Objetivo 🎯
 
- A API (InfoMei) por objetivo direcionar os futuros e/ou atuais microempreendedores individuais (MEIs) através de um ambiente confiável sobre os assuntos relacionados a essa categoria empresarial para que não tenham custos desnecessários e que transmitam os seus dados com segurança por meio do site oficial (através do links trazidos na API). 
+ A API (InfoMei) tem o objetivo direcionar os futuros e/ou atuais microempreendedores individuais (MEIs) através de um ambiente confiável sobre os assuntos relacionados a essa categoria empresarial para que não tenham custos desnecessários e que transmitam os seus dados com segurança por meio do site oficial (através dos links trazidos na API). 
  
  ---
 ## Tecnologias / Ferramentas
